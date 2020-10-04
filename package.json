@@ -1,6 +1,28 @@
 {
   "name": "fatbuffet-app",
-  "version": "0.0.0",
+  "description": "Sistema de pedidos de comida online",
+  "version": "0.1.1",
+  "author": {
+    "name": "Angel Hurtado",
+    "email": "contact@angelxehg.com",
+    "url": "https://angelxehg.com"
+  },
+  "contributors": [
+    {
+      "name": "Briana Nájera"
+    },
+    {
+      "name": "Jennifer Dávila"
+    },
+    {
+      "name": "Mariana Dávila"
+    }
+  ],
+  "homepage": "https://buffet.angelxehg.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angelxehg/fatbuffet-app.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
