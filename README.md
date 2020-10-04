@@ -26,29 +26,14 @@ Use estos comandos para ejecutar tests y verificar calidad del código:
 
 ## VSCode debug
 
-Configure VSCode para poder hacer debug
+Configure VSCode para poder hacer debug:
 
 - Iniciar servidor sin abrir navegador: `ng serve --no-open`
 
-- Crear archivo de configuración: `.vscode/launch.json`
-
-```json
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "pwa-chrome",
-      "request": "launch",
-      "name": "Launch Chrome",
-      "url": "http://localhost:4200",
-      "webRoot": "${workspaceFolder}"
-    }
-  ]
-}
-```
+- Lanza desde el menú de Debug en VSCode.
 
 ## Despliegue
 
-Compila la aplicación en modo de producción. El directorio destino es `www`.
+Compila la aplicación en modo de producción. El directorio destino es `www`:
 
 - Build with Angular: `ng build --prod`
