@@ -8,9 +8,10 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display hello world', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('fatbuffet-app app is running!');
+    expect(page.getHello()).toEqual('Hola mundo!');
+    expect(page.getHelloMsg()).toEqual('Próximamente: Haz tus pedidos en nuestra aplicación');
   });
 
   afterEach(async () => {

@@ -1,27 +1,39 @@
-# FatbuffetApp
+# Fatbuffet App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+Sistema de pedidos de comida online
 
-## Development server
+## Instalación
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Use estos comandos para instalar la aplicación:
 
-## Code scaffolding
+- Instalar Angular CLI: `npm install -g @angular/cli`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Clonar el repositorio: `git clone https://github.com/angelxehg/fatbuffet-app.git`
 
-## Build
+- Instalar dependencias: `cd fatbuffet-app` & `npm install`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Iniciar servidor: `ng serve --open`
 
-## Running unit tests
+## Tests y calidad
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Use estos comandos para ejecutar tests y verificar calidad del código:
 
-## Running end-to-end tests
+- Code linting: `ng lint`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Unit testing: `ng test`
 
-## Further help
+- E2E testing: `ng e2e`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## VSCode debug
+
+Configure VSCode para poder hacer debug:
+
+- Iniciar servidor sin abrir navegador: `ng serve --no-open`
+
+- Lanza desde el menú de Debug en VSCode.
+
+## Despliegue
+
+Compila la aplicación en modo de producción. El directorio destino es `www`:
+
+- Build with Angular: `ng build --prod`
