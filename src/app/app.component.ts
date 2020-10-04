@@ -7,7 +7,6 @@ import { SwUpdate } from '@angular/service-worker';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'fatbuffet-app';
 
   constructor(private swUpdate: SwUpdate) { }
 
