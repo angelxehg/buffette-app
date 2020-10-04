@@ -1,7 +1,7 @@
 {
-  "name": "fatbuffet-app",
-  "short_name": "fatbuffet-app",
-  "theme_color": "#1976d2",
+  "name": "Fatbuffet App",
+  "short_name": "Fatbuffet",
+  "theme_color": "#ff6905",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
