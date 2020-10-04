@@ -134,11 +134,11 @@
           "configurations": {
             "production": {
               "devServerTarget": "fatbuffet-app:serve:production"
+            },
+            "ci": {
+              "devServerTarget": "fatbuffet-app:serve",
+              "protractorConfig": "e2e/protractor-ci.conf.js"
             }
-          },
-          "ci": {
-            "devServerTarget": "helix-webapp:serve",
-            "protractorConfig": "e2e/protractor-ci.conf.js"
           }
         }
       }
