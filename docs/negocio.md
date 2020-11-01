@@ -6,7 +6,7 @@ Resumen de las caracteristicas y visión de nuestro negocio
 
 Nuestra empresa se dedica al desarrollo de herramientas de software que faciliten los procesos de inventario, compra y venta de productos alimenticios, a traves de la implementación y uso de una plataforma web.
 
-- Organización: **Buffette Software** (ficticio)
+- Organización: **Buffette Foods** (ficticio)
 - Producto: **Buffette App** (aplicación web)
 - Rama de Servicios: **Desarrollo de Software**
 
