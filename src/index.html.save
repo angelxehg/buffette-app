@@ -14,7 +14,6 @@
   <meta name="theme-color" content="ff6905">
 </head>
 
-<body class="h-100 bg-dark">
   <app-root class="d-flex flex-column h-100"></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>

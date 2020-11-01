@@ -1,7 +1,7 @@
 {
-  "name": "fatbuffet-app",
-  "description": "Sistema de pedidos de comida online",
-  "version": "0.1.2",
+  "name": "buffette-app",
+  "description": "Sistema para gestionar inventario, compra y venta de productos alimenticios",
+  "version": "0.1.3",
   "author": {
     "name": "Angel Hurtado",
     "email": "contact@angelxehg.com",
@@ -18,10 +18,10 @@
       "name": "Mariana Dávila"
     }
   ],
-  "homepage": "https://buffet.angelxehg.com/",
+  "homepage": "https://angelxehg.github.io/buffette-app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/angelxehg/fatbuffet-app.git"
+    "url": "https://github.com/angelxehg/buffette-app.git"
   },
   "scripts": {
     "ng": "ng",
