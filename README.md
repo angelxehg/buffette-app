@@ -7,6 +7,7 @@ Sistema para gestionar inventario, compra y venta de productos alimenticios
 ## Contenidos
 
 1. [Organización y objetivos](./docs/negocio.md)
-2. [Actividades primarias](./docs/actividades.md)
+2. [Idea del producto Buffette](./docs/producto.md)
+3. [Actividades primarias](./docs/actividades.md)
 3. [Procesos y diagramas](./docs/procesos.md)
 4. [Guía de desarrollo](./docs/desarrollo.md)
