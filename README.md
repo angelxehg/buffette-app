@@ -1,6 +1,6 @@
-# Fatbuffet App
+# Buffette
 
-Sistema de pedidos de comida online
+Sistema para gestionar inventario, compra y venta de productos alimenticios
 
 ## Instalación
 
@@ -8,7 +8,7 @@ Use estos comandos para instalar la aplicación:
 
 - Instalar Angular CLI: `npm install -g @angular/cli`
 
-- Clonar el repositorio: `git clone https://github.com/angelxehg/fatbuffet-app.git`
+- Clonar el repositorio: `git clone https://github.com/angelxehg/buffette-app.git`
 
 - Instalar dependencias: `cd fatbuffet-app` & `npm install`
 
