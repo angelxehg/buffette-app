@@ -4,6 +4,9 @@ Sistema para gestionar inventario, compra y venta de productos alimenticios
 
 ![Logo/Icono de la aplicación](./src/assets/logo/logo-128x128.png)
 
+- [Aplicación web](https://buffette.netlify.app)
+- [Instalación Windows](https://github.com/angelxehg/buffette-app/releases)
+
 ## Contenidos
 
 1. [Organización y objetivos](./docs/negocio.md)
