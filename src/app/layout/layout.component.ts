@@ -10,6 +10,9 @@ export class LayoutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.body.classList.toggle('login-page', false);
+    document.body.classList.toggle('sidebar-mini', true);
+    document.body.classList.toggle('layout-fixed', true);
   }
 
 }
