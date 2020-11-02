@@ -13,8 +13,13 @@ const routes: Routes = [
   },
   {
     path: 'app',
-    loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule),
-  }
+    redirectTo: '/app/inventory',
+    pathMatch: 'full'
+  },
+  {
+    path: 'app/inventory',
+    loadChildren: () => import('./inventory/inventory.module').then(m => m.InventoryModule),
+  },
 ];
 
 @NgModule({
