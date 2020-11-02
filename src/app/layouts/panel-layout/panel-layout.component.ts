@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-panel-layout',
@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PanelLayoutComponent implements OnInit {
 
+  @Input() title = '';
+
   constructor() { }
 
   ngOnInit(): void {
     document.body.classList.toggle('login-page', false);
-    document.body.classList.toggle('sidebar-mini', true);
-    document.body.classList.toggle('layout-fixed', true);
   }
 
 }

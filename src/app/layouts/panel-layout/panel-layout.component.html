@@ -30,22 +30,10 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a routerLink="/app" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a routerLink="/app/inventory" class="nav-link" routerLinkActive="active">
+              <i class="nav-icon fas fa-boxes"></i>
               <p>
-                Widgets
-              </p>
-            </a>
-            <a routerLink="/app" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
-              </p>
-            </a>
-            <a routerLink="/app" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
+                Inventario
               </p>
             </a>
           </li>
@@ -60,7 +48,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Fixed Layout</h1>
+            <h1>{{ title }}</h1>
           </div>
         </div>
       </div>
@@ -74,7 +62,7 @@
   </div>
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.5
+      <b>Version</b> 0.1.3
     </div>
     <strong>Copyright &copy; 2020 <a href="https://angelxehg.github.io/buffette-app">Buffette Foods</a>.</strong> All
     rights
