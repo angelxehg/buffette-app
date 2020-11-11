@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MenuIcon, MenuItem } from 'src/app/models/menu';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-panel-layout',
@@ -38,9 +39,11 @@ export class PanelLayoutComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
 
   icon = (icon: MenuIcon) => `${icon.from} ${icon.name}`;
+
+  logout = () => this.auth.logout();
 
   ngOnInit(): void {
     document.body.classList.toggle('login-page', false);
