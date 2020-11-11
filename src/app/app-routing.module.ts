@@ -6,7 +6,7 @@ import { PanelLayoutComponent } from './layouts/panel-layout/panel-layout.compon
 const routes: Routes = [
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+    loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule),
   },
   {
     path: '',
