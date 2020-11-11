@@ -13,13 +13,17 @@ const routes: Routes = [
   },
   {
     path: 'app',
-    redirectTo: '/app/inventory',
+    redirectTo: '/app/home',
     pathMatch: 'full'
   },
   {
     path: 'app/inventory',
     loadChildren: () => import('./inventory/inventory.module').then(m => m.InventoryModule),
   },
+  {
+    path: 'app/home',
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
+  }
 ];
 
 @NgModule({
