@@ -1,19 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AuthService, AuthServiceMock } from 'src/app/services/auth.service';
 
-import { PanelLayoutComponent } from './panel-layout.component';
+import { LoginComponent } from './login.component';
 
-describe('PanelLayoutComponent', () => {
-  let component: PanelLayoutComponent;
-  let fixture: ComponentFixture<PanelLayoutComponent>;
+describe('LoginComponent', () => {
+  let component: LoginComponent;
+  let fixture: ComponentFixture<LoginComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [PanelLayoutComponent],
+      declarations: [LoginComponent],
       providers: [
         { provide: AuthService, useValue: AuthServiceMock }
       ]
@@ -22,7 +18,7 @@ describe('PanelLayoutComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PanelLayoutComponent);
+    fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

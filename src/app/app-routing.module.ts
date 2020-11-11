@@ -1,24 +1,44 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
+import { PanelLayoutComponent } from './layouts/panel-layout/panel-layout.component';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/auth/login',
-    pathMatch: 'full'
-  },
-  {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+    loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule),
   },
   {
-    path: 'app',
-    redirectTo: '/app/inventory',
-    pathMatch: 'full'
-  },
-  {
-    path: 'app/inventory',
-    loadChildren: () => import('./inventory/inventory.module').then(m => m.InventoryModule),
+    path: '',
+    component: PanelLayoutComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: 'home',
+        loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
+      },
+      {
+        path: 'products',
+        loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule),
+      },
+      {
+        path: 'sales',
+        loadChildren: () => import('./pages/sales/sales.module').then(m => m.SalesModule),
+      },
+      {
+        path: 'supplies',
+        loadChildren: () => import('./pages/supplies/supplies.module').then(m => m.SuppliesModule),
+      },
+      {
+        path: 'inventories',
+        loadChildren: () => import('./pages/inventories/inventories.module').then(m => m.InventoriesModule),
+      },
+      {
+        path: '',
+        redirectTo: '/auth/login',
+        pathMatch: 'full'
+      }
+    ]
   },
 ];
 
