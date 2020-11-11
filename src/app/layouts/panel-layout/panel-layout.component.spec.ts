@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AuthService, AuthServiceMock } from 'src/app/services/auth.service';
 
 import { PanelLayoutComponent } from './panel-layout.component';
 
@@ -8,9 +10,15 @@ describe('PanelLayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PanelLayoutComponent ]
+      imports: [
+        RouterTestingModule
+      ],
+      declarations: [PanelLayoutComponent],
+      providers: [
+        { provide: AuthService, useValue: AuthServiceMock }
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
