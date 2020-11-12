@@ -73,4 +73,31 @@ export class ProductsService {
       }, 500, this.items$);
     });
   }
+
+  public async update(product: Product): Promise<Product> {
+    // HTTP requests
+    return new Promise<Product>((resolve, reject) => {
+      setTimeout((obs: BehaviorSubject<Product[]>, updated: Product) => {
+        const originals = obs.value;
+        const original = originals.find(i => i.id === product.id);
+        //
+        original.code = updated.code;
+        original.title = updated.title;
+        original.brand = updated.brand;
+        //
+        resolve(original);
+      }, 1500, this.items$, product);
+    });
+  }
+
+  public async delete(product: Product): Promise<void> {
+    // HTTP requests
+    return new Promise((resolve, reject) => {
+      setTimeout((obs: BehaviorSubject<Product[]>, deleted: Product) => {
+        const updated = obs.value.filter(i => i.id !== deleted.id);
+        obs.next(updated);
+        resolve();
+      }, 1500, this.items$, product);
+    });
+  }
 }

@@ -52,21 +52,31 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
   }
 
   save(): void {
-    this.mode = 'view';
-    this.service.create(this.product).then(product => {
-      this.router.navigateByUrl('products');
-    });
+    if (this.mode === 'new') {
+      this.mode = 'view';
+      this.service.create(this.product).then(created => {
+        this.router.navigateByUrl(`/products/${created.code}`);
+      });
+    } else {
+      this.mode = 'view';
+      this.service.update(this.product).then(updated => {
+        this.router.navigateByUrl(`/products/${updated.code}`);
+      });
+    }
   }
 
   delete(): void {
-    console.log('delete', this.product);
+    this.mode = 'view';
+    this.service.delete(this.product).then(() => {
+      this.router.navigateByUrl('/products');
+    });
   }
 
   cancel(): void {
     if (this.mode === 'edit') {
       this.mode = 'view';
     } else {
-      this.router.navigateByUrl('products');
+      this.router.navigateByUrl('/products');
     }
   }
 
