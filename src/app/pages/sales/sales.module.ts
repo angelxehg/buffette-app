@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SalesComponent } from './sales.component';
 import { SalesRoutingModule } from './sales-routing.module';
+import { LayoutsModule } from 'src/app/layouts/layouts.module';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { SalesRoutingModule } from './sales-routing.module';
   ],
   imports: [
     CommonModule,
+    LayoutsModule,
     SalesRoutingModule
   ]
 })

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SalesService, SalesServiceMock } from 'src/app/services/sales.service';
 
 import { SalesComponent } from './sales.component';
 
@@ -8,9 +9,12 @@ describe('SalesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SalesComponent ]
+      declarations: [SalesComponent],
+      providers: [
+        { provide: SalesService, useValue: SalesServiceMock }
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
