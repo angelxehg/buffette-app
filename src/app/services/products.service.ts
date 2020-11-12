@@ -42,7 +42,7 @@ export class ProductsService {
               code: `0XYZ000${i}`,
               title: `Producto ${i}`,
               brand: 'Marca A',
-              existencias: 0
+              existencias: 10
             });
           }
         }
@@ -59,6 +59,7 @@ export class ProductsService {
     return new Promise<Product>((resolve, reject) => {
       setTimeout((obs: BehaviorSubject<Product[]>, newProduct: Product) => {
         const products: Product[] = obs.value;
+        product.id = products.length + 1;
         products.push(product);
         resolve(newProduct);
       }, 1500, this.items$, product);

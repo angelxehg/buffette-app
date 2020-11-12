@@ -1,7 +1,7 @@
 {
   "name": "buffette-app",
   "description": "Sistema para gestionar inventario, compra y venta de productos alimenticios",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": {
     "name": "Angel Hurtado",
     "email": "contact@angelxehg.com",
