@@ -3,7 +3,12 @@ import { BehaviorSubject, of } from 'rxjs';
 import { Product } from '../models/product';
 
 export const ProductsServiceMock = {
-  items$: of([])
+  items$: of([]),
+  index: () => of([]).toPromise(),
+  create: () => of({}).toPromise(),
+  find: () => of({}).toPromise(),
+  update: () => of({}).toPromise(),
+  delete: () => of({}).toPromise()
 };
 
 @Injectable({
