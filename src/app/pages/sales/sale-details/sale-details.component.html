@@ -19,14 +19,19 @@
     </div>
     <div class="card-body" *ngIf="sale">
       <div class="form-group">
-        <label for="inputCode">Fecha</label>
-        <input [(ngModel)]="sale.date" [disabled]="!allowEdit()" type="text" class="form-control" id="inputCode"
+        <label for="inputDate">Fecha</label>
+        <input [(ngModel)]="sale.date" [disabled]="!allowEdit()" type="text" class="form-control" id="inputDate"
           placeholder="Fecha de la venta">
       </div>
       <div class="form-group">
-        <label for="inputTitle">Vendedor</label>
-        <input [(ngModel)]="sale.by" [disabled]="!allowEdit()" type="text" class="form-control" id="inputTitle"
+        <label for="inputSeller">Vendedor</label>
+        <input [(ngModel)]="sale.by" [disabled]="!allowEdit()" type="text" class="form-control" id="inputSeller"
           placeholder="Nombre del vendedor">
+      </div>
+      <div class="form-group">
+        <label for="inputAmount">Cantidad</label>
+        <input [(ngModel)]="sale.amount" [disabled]="!allowEdit()" type="number" class="form-control" id="inputAmount"
+          placeholder="Total de la venta">
       </div>
     </div>
     <div class="card-footer">
