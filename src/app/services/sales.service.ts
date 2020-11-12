@@ -52,4 +52,16 @@ export class SalesService {
       }, 1500, this.items$);
     });
   }
+
+  public async create(sale: Sale): Promise<Sale> {
+    // HTTP requests
+    return new Promise<Sale>((resolve, reject) => {
+      setTimeout((obs: BehaviorSubject<Sale[]>, newSale: Sale) => {
+        const sales: Sale[] = obs.value;
+        sale.id = sales.length + 1;
+        sales.push(sale);
+        resolve(newSale);
+      }, 1500, this.items$, sale);
+    });
+  }
 }
