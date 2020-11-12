@@ -9,8 +9,6 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class PanelLayoutComponent implements OnInit {
 
-  @Input() title = '';
-
   menus: MenuItem[] = [
     {
       title: 'Inicio',
