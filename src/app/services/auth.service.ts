@@ -22,10 +22,15 @@ export class AuthService {
     }
   }
 
-  public login(): void {
-    localStorage.setItem('JWT_TOKEN', 'dummy_token');
-    this.sessionStatus.next(true);
-    this.router.navigateByUrl('/home');
+  public async login(): Promise<void> {
+    // HTTP requests
+    return new Promise((resolve, reject) => {
+      setTimeout((obs: BehaviorSubject<boolean>) => {
+        localStorage.setItem('JWT_TOKEN', 'dummy_token');
+        obs.next(true);
+        resolve();
+      }, 1500, this.sessionStatus);
+    });
   }
 
   public logout(): void {
