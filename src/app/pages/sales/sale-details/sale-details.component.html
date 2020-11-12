@@ -1,0 +1,47 @@
+<app-content-header>
+  <div class="col-sm-6">
+    <h1>
+      {{ title }}
+    </h1>
+  </div>
+  <div class="col-sm-6">
+    <ol class="breadcrumb float-sm-right">
+      <li class="breadcrumb-item"><a routerLink="/products">Productos</a></li>
+      <li class="breadcrumb-item active">Nuevo producto</li>
+    </ol>
+  </div>
+</app-content-header>
+
+<app-content>
+  <div class="card card-secondary">
+    <div class="card-header">
+      <h3 class="card-title">Datos del producto</h3>
+    </div>
+    <!-- <div class="card-body" *ngIf="product">
+      <div class="form-group">
+        <label for="inputCode">Código</label>
+        <input [(ngModel)]="product.code" [disabled]="!allowEdit()" type="text" class="form-control" id="inputCode"
+          placeholder="Código del producto">
+      </div>
+      <div class="form-group">
+        <label for="inputTitle">Nombre</label>
+        <input [(ngModel)]="product.title" [disabled]="!allowEdit()" type="text" class="form-control" id="inputTitle"
+          placeholder="Nombre del producto">
+      </div>
+      <div class="form-group">
+        <label for="inputBrand">Marca</label>
+        <input [(ngModel)]="product.brand" [disabled]="!allowEdit()" type="brand" class="form-control" id="inputBrand"
+          placeholder="Marca del producto">
+      </div>
+    </div> -->
+    <!-- <div class="card-footer">
+      <p *ngIf="this.mode === 'wait'" class="text-secondary">Procesando</p>
+      <div class="btn-group" role="group" aria-label="Action buttons">
+        <button class="btn btn-primary" *ngIf="this.mode === 'view'" (click)="this.mode = 'edit'">Editar</button>
+        <button class="btn btn-success" *ngIf="allowEdit()" (click)="save()">Guardar</button>
+        <button class="btn btn-warning" *ngIf="allowEdit()" (click)="cancel()">Cancelar</button>
+        <button class="btn btn-danger" *ngIf="this.mode === 'edit'" (click)="delete()">Eliminar</button>
+      </div>
+    </div> -->
+  </div>
+</app-content>
