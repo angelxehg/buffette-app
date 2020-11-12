@@ -17,7 +17,7 @@
 <app-content>
   <div class="card">
     <div class="card-body p-0">
-      <table class="table table-bordered table-sm">
+      <table class="table table-bordered table-sm table-hover">
         <thead>
           <tr>
             <th style="width: 10px">Código</th>
@@ -28,7 +28,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of items | async">
+          <tr *ngFor="let item of items | async" [routerLink]="item.code">
             <td>{{ item.code }}</td>
             <td>{{ item.title }}</td>
             <td>{{ item.brand }}</td>

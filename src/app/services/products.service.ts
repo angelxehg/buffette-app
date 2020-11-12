@@ -59,4 +59,18 @@ export class ProductsService {
       }, 1500, this.items$, product);
     });
   }
+
+  public async find(code: string): Promise<Product> {
+    // HTTP requests
+    return new Promise<Product>((resolve, reject) => {
+      setTimeout((obs: BehaviorSubject<Product[]>) => {
+        const product = obs.value.find(i => i.code === code);
+        if (product) {
+          resolve(product);
+        } else {
+          reject('Product not found');
+        }
+      }, 500, this.items$);
+    });
+  }
 }
