@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
 
   next = '/home';
+  mode = 'input';
 
   constructor(
     private auth: AuthService,
@@ -23,6 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
+    this.mode = 'wait';
     this.auth.login().then(() => {
       this.router.navigateByUrl(this.next);
     });
