@@ -58,5 +58,17 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
     });
   }
 
+  delete(): void {
+    console.log('delete', this.product);
+  }
+
+  cancel(): void {
+    if (this.mode === 'edit') {
+      this.mode = 'view';
+    } else {
+      this.router.navigateByUrl('products');
+    }
+  }
+
   allowEdit = () => ['new', 'edit'].includes(this.mode);
 }

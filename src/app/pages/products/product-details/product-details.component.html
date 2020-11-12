@@ -1,6 +1,8 @@
 <app-content-header>
   <div class="col-sm-6">
-    <h1>{{ title }}</h1>
+    <h1>
+      {{ title }}
+    </h1>
   </div>
   <div class="col-sm-6">
     <ol class="breadcrumb float-sm-right">
@@ -11,7 +13,7 @@
 </app-content-header>
 
 <app-content>
-  <div class="card card-primary">
+  <div class="card card-secondary">
     <div class="card-header">
       <h3 class="card-title">Datos del producto</h3>
     </div>
@@ -33,7 +35,12 @@
       </div>
     </div>
     <div class="card-footer">
-      <button class="btn btn-primary" (click)="save()" *ngIf="allowEdit()">Guardar</button>
+      <div class="btn-group" role="group" aria-label="Action buttons">
+        <button class="btn btn-primary" *ngIf="this.mode === 'view'" (click)="this.mode = 'edit'">Editar</button>
+        <button class="btn btn-success" *ngIf="allowEdit()" (click)="save()">Guardar</button>
+        <button class="btn btn-warning" *ngIf="allowEdit()" (click)="cancel()">Cancelar</button>
+        <button class="btn btn-danger" *ngIf="this.mode === 'edit'" (click)="delete()">Eliminar</button>
+      </div>
     </div>
   </div>
 </app-content>
