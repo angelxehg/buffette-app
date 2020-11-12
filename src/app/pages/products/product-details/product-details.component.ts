@@ -39,7 +39,7 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
           code: '',
           title: '',
           brand: '',
-          existencias: 0
+          existencias: 5
         };
       }
     });

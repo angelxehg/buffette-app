@@ -42,7 +42,7 @@ export class ProductsService {
               code: `0XYZ000${i}`,
               title: `Producto ${i}`,
               brand: 'Marca A',
-              existencias: 0
+              existencias: 10
             });
           }
         }
