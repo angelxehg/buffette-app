@@ -2,7 +2,7 @@
   <p class="login-box-msg">Inicia sesión para continuar</p>
   <!-- <form action="../../index3.html" method="post"> -->
   <div class="input-group mb-3">
-    <input type="email" class="form-control" placeholder="Correo electrónico">
+    <input type="email" [disabled]="mode !== 'input'" class="form-control" placeholder="Correo electrónico">
     <div class="input-group-append">
       <div class="input-group-text">
         <span class="fas fa-envelope"></span>
@@ -10,15 +10,16 @@
     </div>
   </div>
   <div class="input-group mb-3">
-    <input type="password" class="form-control" placeholder="Contraseña">
+    <input type="password" [disabled]="mode !== 'input'" class="form-control" placeholder="Contraseña">
     <div class="input-group-append">
       <div class="input-group-text">
         <span class="fas fa-lock"></span>
       </div>
     </div>
   </div>
-  <button class="btn btn-primary btn-block" (click)="login()">Iniciar sesión</button>
-  <p class="mb-1">
+  <p *ngIf="this.mode === 'wait'" class="text-secondary">Iniciando...</p>
+  <button class="btn btn-primary btn-block" *ngIf="mode === 'input'" (click)="login()">Iniciar sesión</button>
+  <p class="mb-1" *ngIf="mode === 'input'">
     <a routerLink="/home">Recuperar contraseña</a>
   </p>
 </div>

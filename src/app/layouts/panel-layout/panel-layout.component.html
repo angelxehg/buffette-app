@@ -17,7 +17,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a routerLink="/home" class="brand-link" routerLinkActive="active">
+    <a routerLink="/" class="brand-link">
       <img src="./assets/icons/icon-128x128.png" alt="Buffette Logo" class="brand-image img-circle elevation-3"
         style="opacity: .8">
       <span class="brand-text font-weight-light">Buffette</span>
@@ -48,26 +48,11 @@
   </aside>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>{{ title }}</h1>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <router-outlet></router-outlet>
-      </div>
-    </section>
+    <router-outlet></router-outlet>
   </div>
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> v0.2.0
+      <b>Version</b> v0.3.0
     </div>
     <strong>Copyright &copy; 2020 <a href="https://angelxehg.github.io/buffette-app">Buffette Foods</a>.</strong> All
     rights
