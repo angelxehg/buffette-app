@@ -64,4 +64,45 @@ export class SalesService {
       }, 1500, this.items$, sale);
     });
   }
+
+  public async find(id: string): Promise<Sale> {
+    // HTTP requests
+    return new Promise<Sale>((resolve, reject) => {
+      setTimeout((obs: BehaviorSubject<Sale[]>) => {
+        const sale = obs.value.find(i => i.id.toString() === id);
+        if (sale) {
+          resolve(sale);
+        } else {
+          reject('Sale not found');
+        }
+      }, 500, this.items$);
+    });
+  }
+
+  public async update(sale: Sale): Promise<Sale> {
+    // HTTP requests
+    return new Promise<Sale>((resolve, reject) => {
+      setTimeout((obs: BehaviorSubject<Sale[]>, updated: Sale) => {
+        const originals = obs.value;
+        const original = originals.find(i => i.id === sale.id);
+        //
+        original.date = updated.date;
+        original.by = updated.by;
+        original.amount = updated.amount;
+        //
+        resolve(original);
+      }, 1500, this.items$, sale);
+    });
+  }
+
+  public async delete(sale: Sale): Promise<void> {
+    // HTTP requests
+    return new Promise((resolve, reject) => {
+      setTimeout((obs: BehaviorSubject<Sale[]>, deleted: Sale) => {
+        const updated = obs.value.filter(i => i.id !== deleted.id);
+        obs.next(updated);
+        resolve();
+      }, 1500, this.items$, sale);
+    });
+  }
 }

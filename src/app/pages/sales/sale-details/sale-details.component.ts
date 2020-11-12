@@ -29,8 +29,8 @@ export class SaleDetailsComponent implements OnInit, OnDestroy {
       if (params.id) {
         this.mode = 'view';
         this.title = 'Detalles de la venta';
-        // this.service.find(params.id).then(product => this.product = product)
-        //   .catch(err => console.log(err));
+        this.service.find(params.id).then(sale => this.sale = sale)
+          .catch(err => console.log(err));
       } else {
         this.mode = 'new';
         this.title = 'Nueva venta';
@@ -59,18 +59,18 @@ export class SaleDetailsComponent implements OnInit, OnDestroy {
       });
     } else {
       this.mode = 'wait';
-      // this.service.update(this.product).then(updated => {
-      //   this.mode = 'view';
-      //   this.router.navigateByUrl(`/products/${updated.code}`);
-      // });
+      this.service.update(this.sale).then(updated => {
+        this.mode = 'view';
+        this.router.navigateByUrl(`/sales/${updated.id}`);
+      });
     }
   }
 
   delete(): void {
     this.mode = 'wait';
-    // this.service.delete(this.product).then(() => {
-    //   this.router.navigateByUrl('/products');
-    // });
+    this.service.delete(this.sale).then(() => {
+      this.router.navigateByUrl('/sales');
+    });
   }
 
   cancel(): void {

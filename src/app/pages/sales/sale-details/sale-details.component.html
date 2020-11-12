@@ -20,7 +20,7 @@
     <div class="card-body" *ngIf="sale">
       <div class="form-group">
         <label for="inputCode">Fecha</label>
-        <input [(ngModel)]="sale.date" [disabled]="this.mode !== 'new'" type="text" class="form-control" id="inputCode"
+        <input [(ngModel)]="sale.date" [disabled]="!allowEdit()" type="text" class="form-control" id="inputCode"
           placeholder="Fecha de la venta">
       </div>
       <div class="form-group">
