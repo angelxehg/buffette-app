@@ -16,17 +16,17 @@ export class PanelLayoutComponent implements OnInit {
       icon: { from: 'fas', name: 'fa-home' }
     },
     {
-      title: 'Vender',
+      title: 'Ventas',
       link: '/sales',
       icon: { from: 'fas', name: 'fa-cash-register' }
     },
     {
-      title: 'Surtir',
+      title: 'Surtidos',
       link: '/supplies',
       icon: { from: 'fas', name: 'fa-parachute-box' }
     },
     {
-      title: 'Inventariar',
+      title: 'Inventarios',
       link: '/inventories',
       icon: { from: 'fas', name: 'fa-calculator' }
     },
