@@ -27,20 +27,19 @@ export class ProductsService {
   public index(): void {
     // HTTP requests
     setTimeout((obs: BehaviorSubject<Product[]>) => {
-      if (obs.value.length === 0) {
-        const products: Product[] = [
-          { id: 1, code: '00001', title: 'Producto 1', brand: 'Marca A', existencias: 0 },
-          { id: 2, code: '00002', title: 'Producto 2', brand: 'Marca A', existencias: 0 },
-          { id: 3, code: '00003', title: 'Producto 3', brand: 'Marca A', existencias: 0 },
-          { id: 4, code: '00004', title: 'Producto 3', brand: 'Marca A', existencias: 0 },
-          { id: 5, code: '00005', title: 'Producto 3', brand: 'Marca A', existencias: 0 },
-        ];
-        obs.next(products);
-        // Save in storage
-        localStorage.setItem('PRODUCTS', JSON.stringify(products));
-      } else {
-        localStorage.setItem('PRODUCTS', JSON.stringify(obs.value));
+      const products: Product[] = [];
+      for (let i = 1; i <= 15; i++) {
+        products.push({
+          id: i,
+          code: `0XYZ000${i}`,
+          title: `Producto ${i}`,
+          brand: 'Marca A',
+          existencias: 0
+        });
       }
+      obs.next(products);
+      // Save in storage
+      localStorage.setItem('PRODUCTS', JSON.stringify(products));
     }, 1500, this.items$);
   }
 }
