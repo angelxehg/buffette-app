@@ -24,33 +24,39 @@ export class ProductsService {
     }
   }
 
-  public index(): void {
+  public async index(): Promise<Product[]> {
     // HTTP requests
-    setTimeout((obs: BehaviorSubject<Product[]>) => {
-      const products = obs.value;
-      // Mock data
-      if (products.length === 0) {
-        for (let i = 1; i <= 5; i++) {
-          products.push({
-            id: i,
-            code: `0XYZ000${i}`,
-            title: `Producto ${i}`,
-            brand: 'Marca A',
-            existencias: 0
-          });
+    return new Promise<Product[]>((resolve, reject) => {
+      setTimeout((obs: BehaviorSubject<Product[]>) => {
+        const products = obs.value;
+        // Mock data
+        if (products.length === 0) {
+          for (let i = 1; i <= 5; i++) {
+            products.push({
+              id: i,
+              code: `0XYZ000${i}`,
+              title: `Producto ${i}`,
+              brand: 'Marca A',
+              existencias: 0
+            });
+          }
         }
+        // Save in storage
         obs.next(products);
-      }
-      // Save in storage
-      localStorage.setItem('PRODUCTS', JSON.stringify(products));
-    }, 1500, this.items$);
+        localStorage.setItem('PRODUCTS', JSON.stringify(products));
+        resolve(products);
+      }, 1500, this.items$);
+    });
   }
 
-  public create(product: Product): void {
+  public async create(product: Product): Promise<Product> {
     // HTTP requests
-    setTimeout((obs: BehaviorSubject<Product[]>) => {
-      const products: Product[] = obs.value;
-      products.push(product);
-    }, 1500, this.items$);
+    return new Promise<Product>((resolve, reject) => {
+      setTimeout((obs: BehaviorSubject<Product[]>, newProduct: Product) => {
+        const products: Product[] = obs.value;
+        products.push(product);
+        resolve(newProduct);
+      }, 1500, this.items$, product);
+    });
   }
 }

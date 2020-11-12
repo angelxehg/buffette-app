@@ -1,6 +1,6 @@
 <app-content-header>
   <div class="col-sm-6">
-    <h1>Nuevo producto</h1>
+    <h1>{{ title }}</h1>
   </div>
   <div class="col-sm-6">
     <ol class="breadcrumb float-sm-right">
@@ -18,22 +18,22 @@
     <div class="card-body" *ngIf="product">
       <div class="form-group">
         <label for="inputCode">Código</label>
-        <input [(ngModel)]="product.code" type="text" class="form-control" id="inputCode"
+        <input [(ngModel)]="product.code" [disabled]="!allowEdit()" type="text" class="form-control" id="inputCode"
           placeholder="Código del producto">
       </div>
       <div class="form-group">
         <label for="inputTitle">Nombre</label>
-        <input [(ngModel)]="product.title" type="text" class="form-control" id="inputTitle"
+        <input [(ngModel)]="product.title" [disabled]="!allowEdit()" type="text" class="form-control" id="inputTitle"
           placeholder="Nombre del producto">
       </div>
       <div class="form-group">
         <label for="inputBrand">Marca</label>
-        <input [(ngModel)]="product.brand" type="brand" class="form-control" id="inputBrand"
+        <input [(ngModel)]="product.brand" [disabled]="!allowEdit()" type="brand" class="form-control" id="inputBrand"
           placeholder="Marca del producto">
       </div>
     </div>
     <div class="card-footer">
-      <button class="btn btn-primary" (click)="save()">Guardar</button>
+      <button class="btn btn-primary" (click)="save()" *ngIf="allowEdit()">Guardar</button>
     </div>
   </div>
 </app-content>
