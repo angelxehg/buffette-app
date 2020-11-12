@@ -53,20 +53,22 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
 
   save(): void {
     if (this.mode === 'new') {
-      this.mode = 'view';
+      this.mode = 'wait';
       this.service.create(this.product).then(created => {
+        this.mode = 'view';
         this.router.navigateByUrl(`/products/${created.code}`);
       });
     } else {
-      this.mode = 'view';
+      this.mode = 'wait';
       this.service.update(this.product).then(updated => {
+        this.mode = 'view';
         this.router.navigateByUrl(`/products/${updated.code}`);
       });
     }
   }
 
   delete(): void {
-    this.mode = 'view';
+    this.mode = 'wait';
     this.service.delete(this.product).then(() => {
       this.router.navigateByUrl('/products');
     });
