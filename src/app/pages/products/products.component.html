@@ -2,25 +2,23 @@
 
 <app-content>
   <div class="card">
-    <div class="card-body p-0">
+    <div class="card-body p-0" *ngIf="products">
       <table class="table table-bordered">
         <thead>
           <tr>
             <th style="width: 10px">Código</th>
             <th>Nombre</th>
-            <th>Existencias</th>
+            <th>Marca</th>
+            <th style="width: 40px">Existencias</th>
             <th style="width: 40px">Acción</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1.</td>
-            <td>Update software</td>
-            <td>
-              <div class="progress progress-xs">
-                <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-              </div>
-            </td>
+          <tr *ngFor="let item of products">
+            <td>{{ item.code }}</td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.brand }}</td>
+            <td>{{ item.existencias }}</td>
             <td><span class="badge bg-danger">55%</span></td>
           </tr>
         </tbody>
