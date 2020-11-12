@@ -20,3 +20,7 @@ La aplicación se alimentará de la información del inventario para mostrar qu�
 ## Ventas
 
 La aplicación permitirá registrar las ventas, haciendo la función de un punto de ventas muy sencillo, que se alimentará de los datos del inventario, y que reflejará las operaciones de venta en este inventario.
+
+## Proceso actual
+
+Uno de los procesos que vamos a mejorar es el de [Inventario](./procesos/inventario.md). Ver todo los procesos [aquí](./procesos.md).
