@@ -5,6 +5,7 @@ import { InventoriesComponent } from './inventories.component';
 import { InventoriesRoutingModule } from './inventories-routing.module';
 import { InventoryDetailsComponent } from './inventory-details/inventory-details.component';
 import { LayoutsModule } from 'src/app/layouts/layouts.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { LayoutsModule } from 'src/app/layouts/layouts.module';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     LayoutsModule,
     InventoriesRoutingModule
   ]
