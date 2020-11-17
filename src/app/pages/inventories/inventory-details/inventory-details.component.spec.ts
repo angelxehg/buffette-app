@@ -1,15 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { InventoriesService, InventoriesServiceMock } from 'src/app/services/inventories.service';
 
-import { InventoriesComponent } from './inventories.component';
+import { InventoryDetailsComponent } from './inventory-details.component';
 
-describe('InventoriesComponent', () => {
-  let component: InventoriesComponent;
-  let fixture: ComponentFixture<InventoriesComponent>;
+describe('InventoryDetailsComponent', () => {
+  let component: InventoryDetailsComponent;
+  let fixture: ComponentFixture<InventoryDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InventoriesComponent],
+      declarations: [InventoryDetailsComponent],
+      imports: [
+        RouterTestingModule
+      ],
       providers: [
         { provide: InventoriesService, useValue: InventoriesServiceMock }
       ]
@@ -18,7 +22,7 @@ describe('InventoriesComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InventoriesComponent);
+    fixture = TestBed.createComponent(InventoryDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
