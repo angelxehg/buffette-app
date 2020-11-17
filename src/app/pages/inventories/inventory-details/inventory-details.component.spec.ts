@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { InventoriesService, InventoriesServiceMock } from 'src/app/services/inventories.service';
 
 import { InventoryDetailsComponent } from './inventory-details.component';
@@ -10,6 +11,9 @@ describe('InventoryDetailsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [InventoryDetailsComponent],
+      imports: [
+        RouterTestingModule
+      ],
       providers: [
         { provide: InventoriesService, useValue: InventoriesServiceMock }
       ]

@@ -49,7 +49,7 @@ export class SalesService {
         obs.next(sales);
         localStorage.setItem('SALES', JSON.stringify(sales));
         resolve(sales);
-      }, 1500, this.items$);
+      }, 200, this.items$);
     });
   }
 
@@ -61,7 +61,7 @@ export class SalesService {
         sale.id = sales.length + 1;
         sales.push(sale);
         resolve(newSale);
-      }, 1500, this.items$, sale);
+      }, 500, this.items$, sale);
     });
   }
 
@@ -75,7 +75,7 @@ export class SalesService {
         } else {
           reject('Sale not found');
         }
-      }, 500, this.items$);
+      }, 200, this.items$);
     });
   }
 
@@ -91,7 +91,7 @@ export class SalesService {
         original.amount = updated.amount;
         //
         resolve(original);
-      }, 1500, this.items$, sale);
+      }, 500, this.items$, sale);
     });
   }
 
@@ -102,7 +102,7 @@ export class SalesService {
         const updated = obs.value.filter(i => i.id !== deleted.id);
         obs.next(updated);
         resolve();
-      }, 1500, this.items$, sale);
+      }, 500, this.items$, sale);
     });
   }
 }

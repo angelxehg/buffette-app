@@ -29,7 +29,7 @@ export class AuthService {
         localStorage.setItem('JWT_TOKEN', 'dummy_token');
         obs.next(true);
         resolve();
-      }, 1500, this.sessionStatus);
+      }, 500, this.sessionStatus);
     });
   }
 

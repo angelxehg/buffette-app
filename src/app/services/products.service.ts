@@ -50,7 +50,7 @@ export class ProductsService {
         obs.next(products);
         localStorage.setItem('PRODUCTS', JSON.stringify(products));
         resolve(products);
-      }, 1500, this.items$);
+      }, 200, this.items$);
     });
   }
 
@@ -62,7 +62,7 @@ export class ProductsService {
         product.id = products.length + 1;
         products.push(product);
         resolve(newProduct);
-      }, 1500, this.items$, product);
+      }, 500, this.items$, product);
     });
   }
 
@@ -76,7 +76,7 @@ export class ProductsService {
         } else {
           reject('Product not found');
         }
-      }, 500, this.items$);
+      }, 200, this.items$);
     });
   }
 
@@ -92,7 +92,7 @@ export class ProductsService {
         original.brand = updated.brand;
         //
         resolve(original);
-      }, 1500, this.items$, product);
+      }, 500, this.items$, product);
     });
   }
 
@@ -103,7 +103,7 @@ export class ProductsService {
         const updated = obs.value.filter(i => i.id !== deleted.id);
         obs.next(updated);
         resolve();
-      }, 1500, this.items$, product);
+      }, 500, this.items$, product);
     });
   }
 }

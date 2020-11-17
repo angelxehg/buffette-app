@@ -47,7 +47,7 @@ export class InventoriesService {
         obs.next(inventories);
         localStorage.setItem('INVENTORIES', JSON.stringify(inventories));
         resolve(inventories);
-      }, 1500, this.items$);
+      }, 200, this.items$);
     });
   }
 
@@ -59,7 +59,7 @@ export class InventoriesService {
         inventory.id = inventories.length + 1;
         inventories.push(inventory);
         resolve(newInventory);
-      }, 1500, this.items$, inventory);
+      }, 500, this.items$, inventory);
     });
   }
 
@@ -73,7 +73,7 @@ export class InventoriesService {
         } else {
           reject('Inventory not found');
         }
-      }, 500, this.items$);
+      }, 200, this.items$);
     });
   }
 
@@ -87,7 +87,7 @@ export class InventoriesService {
         original.date = updated.date;
         //
         resolve(original);
-      }, 1500, this.items$, sale);
+      }, 500, this.items$, sale);
     });
   }
 
@@ -98,7 +98,7 @@ export class InventoriesService {
         const updated = obs.value.filter(i => i.id !== deleted.id);
         obs.next(updated);
         resolve();
-      }, 1500, this.items$, sale);
+      }, 500, this.items$, sale);
     });
   }
 }
