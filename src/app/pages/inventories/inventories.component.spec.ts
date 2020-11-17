@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { InventoriesService, InventoriesServiceMock } from 'src/app/services/inventories.service';
 
 import { InventoriesComponent } from './inventories.component';
 
@@ -8,9 +9,12 @@ describe('InventoriesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InventoriesComponent ]
+      declarations: [InventoriesComponent],
+      providers: [
+        { provide: InventoriesService, useValue: InventoriesServiceMock }
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
