@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { SuppliesComponent } from './supplies.component';
 import { SuppliesRoutingModule } from './supplies-routing.module';
+import { LayoutsModule } from 'src/app/layouts/layouts.module';
 
 @NgModule({
   declarations: [
@@ -10,6 +12,8 @@ import { SuppliesRoutingModule } from './supplies-routing.module';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    LayoutsModule,
     SuppliesRoutingModule
   ]
 })

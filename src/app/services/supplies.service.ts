@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, of } from 'rxjs';
 import { Supply } from '../models/supply';
 
-export const InventoriesServiceMock = {
+export const SuppliesServiceMock = {
   items$: of([]),
   index: () => of([]).toPromise(),
   create: () => of({}).toPromise(),

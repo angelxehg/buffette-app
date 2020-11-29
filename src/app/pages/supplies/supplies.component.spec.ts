@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SuppliesService, SuppliesServiceMock } from 'src/app/services/supplies.service';
 
 import { SuppliesComponent } from './supplies.component';
 
@@ -8,9 +9,12 @@ describe('SuppliesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SuppliesComponent ]
+      declarations: [SuppliesComponent],
+      providers: [
+        { provide: SuppliesService, useValue: SuppliesServiceMock }
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
