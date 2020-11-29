@@ -10,7 +10,7 @@ Use estos comandos para instalar la aplicación:
 
 - Clonar el repositorio: `git clone https://github.com/angelxehg/buffette-app.git`
 
-- Instalar dependencias: `cd fatbuffet-app` & `npm install`
+- Instalar dependencias: `cd butteffe-app` & `npm install`
 
 - Iniciar servidor: `ng serve --open`
 

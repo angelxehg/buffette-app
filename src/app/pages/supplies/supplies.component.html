@@ -1,1 +1,36 @@
-<p>supplies works!</p>
+<app-content-header>
+  <div class="col-sm-6">
+    <h1>
+      Surtidos
+      <a routerLink="new" style="color: black; font-size: smaller;">
+        <i class="fas fa-plus"></i>
+      </a>
+    </h1>
+  </div>
+  <div class="col-sm-6">
+    <ol class="breadcrumb float-sm-right">
+      <li class="breadcrumb-item active">Surtidos</li>
+    </ol>
+  </div>
+</app-content-header>
+
+<app-content>
+  <div class="card">
+    <div class="card-body p-0">
+      <table class="table table-bordered table-sm table-hover">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th style="width: 40px">Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items | async" [routerLink]="item.id">
+            <td>{{ item.date }}</td>
+            <td><span class="badge bg-danger">55%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</app-content>
