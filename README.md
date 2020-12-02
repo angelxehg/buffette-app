@@ -4,8 +4,7 @@ Sistema para gestionar inventario, compra y venta de productos alimenticios para
 
 ![Logo/Icono de la aplicación](./src/assets/logo/logo-128x128.png)
 
-- [Aplicación web](https://buffette.netlify.app)
-- [Instalación Windows](https://github.com/angelxehg/buffette-app/releases)
+- [Prototipo Aplicación web](https://buffette.netlify.app)
 
 ## Contenidos
 
@@ -13,4 +12,5 @@ Sistema para gestionar inventario, compra y venta de productos alimenticios para
 2. [Idea del producto Buffette](./docs/producto.md)
 3. [Actividades primarias y de soporte](./docs/actividades.md)
 4. [Procesos y diagramas](./docs/procesos.md)
-5. [Guía de desarrollo](./docs/desarrollo.md)
+5. [Casos de Uso](./docs/casos_de_uso.md)
+6. [Guía de desarrollo](./docs/desarrollo.md)
