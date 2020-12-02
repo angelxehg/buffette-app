@@ -23,7 +23,7 @@
   3.11. Si el usuario presiona Continuar, Aplicación envía datos a API
 4. Aplicación muestra resumen de productos surtidos
 5. Si Usuario presiona Confirmar:
-  5.1. Aplicación envia datos a API
+  5.1. Aplicación envía datos a API
   5.2. API Backend integra datos en el inventario general
 6. Si Usuario presiona Cancelar:
   6.1 App pide a API eliminar datos del surtido
