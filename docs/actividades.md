@@ -10,4 +10,4 @@ El software Buffette cubrirá las siguientes actividades primarias y de soporte
 
 ## Actividades de soporte
 
-1. Desarrollo y mantenimiento del software (Ver [Proceso de Desarrollo](./procesos/desarrollo.md))
+1. Desarrollo y mantenimiento del software.

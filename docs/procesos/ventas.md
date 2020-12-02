@@ -1,30 +1,28 @@
 # Proceso de Ventas
 
-(Descripción)
+Este es el proceso mediante el cual se registran las ventas realizadas
 
 ## Datos de entrada
 
-- (Dato 1)
-- (Dato 2)
-- (Dato 3)
+- Código de barras de los productos
+- Cantidad de los productos
 
 ## Elementos de salida
 
-- (Elemento 1)
-- (Elemento 2)
-- (Elemento 3)
+- Inventario/stock actualizado
 
 ## Actores
 
-- (Actor 1)
-- (Actor 2)
+- Empleado
+- Vendedor (externo)
 
 ## Roles
 
-- (Rol 1)
-- (Rol 2)
+- Empleado
 
 ## Procedimiento
+
+Para un procedimiento más detallado, ver [Caso de Uso de Ventas](../casos_de_uso/ventas.md)
 
 1. Paso 1
 2. Paso 2

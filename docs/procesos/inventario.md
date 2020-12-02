@@ -1,32 +1,28 @@
 # Proceso de Inventario
 
-Las mejoras propuestas al proceso tienen que ver con la transición de los registros en papel a los digitales.
+Este es el proceso mediante el cual se realiza un inventario a todas las areas, se analizan las diferencias, posibles perdidas y se ajusta el registro de productos en Stock. Las mejoras propuestas al proceso tienen que ver con la transición de los registros en papel a los digitales.
 
 ## Datos de entrada
 
-- (Dato 1)
-- (Dato 2)
-- (Dato 3)
+- Empleados asignados a cada area
 
 ## Elementos de salida
 
-- (Elemento 1)
-- (Elemento 2)
-- (Elemento 3)
+- Inventario/stock actualizado
 
 ## Actores
 
-- (Actor 1)
-- (Actor 2)
+- Administrador (Planea el Inventario)
+- Empleado (Realiza el Inventario)
 
 ## Roles
 
-- (Rol 1)
-- (Rol 2)
+- Administrador (Planea el Inventario)
+- Empleado (Realiza el Inventario)
 
 ## Procedimiento
 
-El proceso de inventario se divide en los siguientes pasos:
+Para un procedimiento más detallado, ver [Caso de Uso de Inventario](../casos_de_uso/inventario.md) El proceso de inventario se divide en los siguientes pasos:
 
 1. Planificación del inventario: Se determina cual es el mejor dia y hora para realizarlo, buscando afectar lo menos posible las operaciones de negocios. Después se convoca a los empleados con días de antelación,
 2. Organizar productos por áreas: Se verifica que los productos se encuentren en las áreas correctas. En el caso de los productos alimenticios también se separan los que se encuentren caducados o dañados.
