@@ -1,6 +1,6 @@
 # Organización y objetivos
 
-Resumen de las caracteristicas y visión de nuestro negocio
+Resumen de las características y visión de nuestro negocio
 
 ## Resumen
 

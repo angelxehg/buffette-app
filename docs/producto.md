@@ -1,6 +1,6 @@
 # Idea del producto Buffette
 
-Como se describe en la página principal, Buffette será un Sistema para gestionar inventario, compra y venta de productos alimenticios, el cual estará basado en tecnologías web y se distriburia como [Aplicación Web](https://buffette.netlify.app), y como aplicación de [Windows](https://github.com/angelxehg/buffette-app/releases)
+Como se describe en la página principal, Buffette será un Sistema para gestionar inventario, compra y venta de productos alimenticios, el cual estará basado en tecnologías web y se distribuirá como [Aplicación Web](https://buffette.netlify.app)
 
 ## Problema inicial
 
