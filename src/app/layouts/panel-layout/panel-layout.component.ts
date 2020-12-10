@@ -11,11 +11,6 @@ export class PanelLayoutComponent implements OnInit {
 
   menus: MenuItem[] = [
     {
-      title: 'Inicio',
-      link: '/home',
-      icon: { from: 'fas', name: 'fa-home' }
-    },
-    {
       title: 'Ventas',
       link: '/sales',
       icon: { from: 'fas', name: 'fa-cash-register' }
