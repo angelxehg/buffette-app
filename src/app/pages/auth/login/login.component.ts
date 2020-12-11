@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  next = '/home';
+  next = '/sales';
   mode = 'input';
 
   constructor(

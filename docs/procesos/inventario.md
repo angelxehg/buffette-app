@@ -2,6 +2,8 @@
 
 Este es el proceso mediante el cual se realiza un inventario a todas las areas, se analizan las diferencias, posibles perdidas y se ajusta el registro de productos en Stock. Las mejoras propuestas al proceso tienen que ver con la transición de los registros en papel a los digitales.
 
+![Diagrama RAD Inventario](./../images/RADInventario.png)
+
 ## Datos de entrada
 
 - Empleados asignados a cada area

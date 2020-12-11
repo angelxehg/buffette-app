@@ -18,7 +18,7 @@ export class NoAuthGuard implements CanActivate {
       filter(v => v !== null),
       map(logged => {
         if (logged) {
-          return this.router.createUrlTree(['/home']);
+          return this.router.createUrlTree(['/sales']);
         }
         return true;
       })
