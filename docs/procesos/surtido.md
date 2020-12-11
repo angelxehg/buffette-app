@@ -27,8 +27,7 @@ Este es el proceso mediante el cual se registran los productos que son comprados
 
 Para un procedimiento más detallado, ver [Caso de Uso de Surtido](../casos_de_uso/surtido.md)
 
-1. Paso 1
-2. Paso 2
-3. Paso 3
-4. Paso 4
-5. Paso 5
+1. El proveedor ingresa al establecimiento. Se surten los productos y se entrega una factura o ticket.
+2. El empleado ingresa al sistema, al apartado de Surtidos.
+3. El empleado registra los productos nuevos, productos que se surten y productos que se retiran
+4. La aplicación guarda la información actualizada del Stock
