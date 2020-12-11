@@ -2,6 +2,8 @@
 
 Este es el proceso mediante el cual se registran las ventas realizadas
 
+![Diagrama RAD Ventas](./../images/RADVentas.png)
+
 ## Datos de entrada
 
 - Código de barras de los productos

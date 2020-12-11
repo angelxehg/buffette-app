@@ -2,6 +2,8 @@
 
 Este es el proceso mediante el cual se registran los productos que son comprados
 
+![Diagrama RAD Surtido](./../images/RADSurtido.png)
+
 ## Datos de entrada
 
 - Código de barras de los productos
