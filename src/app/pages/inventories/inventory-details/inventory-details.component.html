@@ -21,16 +21,77 @@
       <div class="form-group">
         <label for="inputDate">Fecha</label>
         <input [(ngModel)]="inventory.date" [disabled]="!allowEdit()" type="text" class="form-control" id="inputDate"
-          placeholder="Fecha de la venta">
+          placeholder="Fecha del inventario">
       </div>
     </div>
     <div class="card-footer">
       <p *ngIf="this.mode === 'wait'" class="text-secondary">Procesando</p>
       <div class="btn-group" role="group" aria-label="Action buttons">
-        <button class="btn btn-primary" *ngIf="this.mode === 'view'" (click)="this.mode = 'edit'">Editar</button>
         <button class="btn btn-success" *ngIf="allowEdit()" (click)="save()">Guardar</button>
         <button class="btn btn-warning" *ngIf="allowEdit()" (click)="cancel()">Cancelar</button>
         <button class="btn btn-danger" *ngIf="this.mode === 'edit'" (click)="delete()">Eliminar</button>
+      </div>
+    </div>
+  </div>
+  <div class="card card-secondary" *ngIf="this.mode !== 'new'">
+    <div class="card-header">
+      <h3 class="card-title">Areas del inventario</h3>
+    </div>
+    <div class="card-body">
+      <div class="row" *ngFor="let area of areas">
+        <div class="col">
+          {{ area.name }}
+        </div>
+        <div class="col">
+          {{ area.by }}
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="btn-group" role="group" aria-label="Action buttons">
+        <button class="btn btn-success" (click)="areasOk = true" [disabled]="areasOk">Confirmar</button>
+      </div>
+    </div>
+  </div>
+  <div class="card card-secondary" *ngIf="areasOk">
+    <div class="card-header">
+      <h3 class="card-title">Conteo</h3>
+    </div>
+    <div class="card-body">
+      <div class="row" *ngFor="let product of products">
+        <div class="col">
+          {{ product.name }}
+        </div>
+        <div class="col">
+          <input [(ngModel)]="product.current" type="number" class="form-control" [disabled]="productsOk">
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="btn-group" role="group" aria-label="Action buttons">
+        <button class="btn btn-success" (click)="productsOk = true" [disabled]="productsOk">Confirmar</button>
+      </div>
+    </div>
+  </div>
+  <div class="card card-secondary" *ngIf="productsOk">
+    <div class="card-header">
+      <h3 class="card-title">Resultado final</h3>
+    </div>
+    <div class="card-body">
+      <div class="row" *ngFor="let product of products">
+        <div class="col">
+          {{ product.name }}
+        </div>
+        <div class="col">
+          Stock {{ product.stock }}
+          Actual {{ product.current }}
+          Diferencia {{ product.stock - product.current }}
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="btn-group" role="group" aria-label="Action buttons">
+        <a type="button" routerLink="/inventories" class="btn btn-success">Confirmar</a>
       </div>
     </div>
   </div>

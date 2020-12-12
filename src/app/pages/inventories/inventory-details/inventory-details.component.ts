@@ -16,6 +16,48 @@ export class InventoryDetailsComponent implements OnInit, OnDestroy {
 
   inventory: Inventory;
 
+  areas = [
+    {
+      name: "Refrigerados",
+      by: "Angel Hurtado"
+    },
+    {
+      name: "Cereales",
+      by: "Angel Hurtado"
+    },
+    {
+      name: "Enlatados",
+      by: "Angel Hurtado"
+    }
+  ]
+
+  areasOk = false;
+
+  products = [
+    {
+      name: "Producto 1",
+      current: 0,
+      stock: 46
+    },
+    {
+      name: "Producto 2",
+      current: 0,
+      stock: 15
+    },
+    {
+      name: "Producto 3",
+      current: 0,
+      stock: 63
+    },
+    {
+      name: "Producto 4",
+      current: 0,
+      stock: 47
+    }
+  ];
+
+  productsOk = false;
+
   paramSubscription: Subscription;
 
   constructor(
