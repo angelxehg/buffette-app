@@ -73,4 +73,26 @@
       </div>
     </div>
   </div>
+  <div class="card card-secondary" *ngIf="productsOk">
+    <div class="card-header">
+      <h3 class="card-title">Resultado final</h3>
+    </div>
+    <div class="card-body">
+      <div class="row" *ngFor="let product of products">
+        <div class="col">
+          {{ product.name }}
+        </div>
+        <div class="col">
+          Stock {{ product.stock }}
+          Actual {{ product.current }}
+          Diferencia {{ product.stock - product.current }}
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="btn-group" role="group" aria-label="Action buttons">
+        <a type="button" routerLink="/inventories" class="btn btn-success">Confirmar</a>
+      </div>
+    </div>
+  </div>
 </app-content>
