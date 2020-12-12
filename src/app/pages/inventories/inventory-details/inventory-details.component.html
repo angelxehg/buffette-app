@@ -27,10 +27,29 @@
     <div class="card-footer">
       <p *ngIf="this.mode === 'wait'" class="text-secondary">Procesando</p>
       <div class="btn-group" role="group" aria-label="Action buttons">
-        <button class="btn btn-primary" *ngIf="this.mode === 'view'" (click)="this.mode = 'edit'">Editar</button>
         <button class="btn btn-success" *ngIf="allowEdit()" (click)="save()">Guardar</button>
         <button class="btn btn-warning" *ngIf="allowEdit()" (click)="cancel()">Cancelar</button>
         <button class="btn btn-danger" *ngIf="this.mode === 'edit'" (click)="delete()">Eliminar</button>
+      </div>
+    </div>
+  </div>
+  <div class="card card-secondary" *ngIf="this.mode !== 'new'">
+    <div class="card-header">
+      <h3 class="card-title">Areas del inventario</h3>
+    </div>
+    <div class="card-body">
+      <div class="row" *ngFor="let area of areas">
+        <div class="col">
+          {{ area.name }}
+        </div>
+        <div class="col">
+          {{ area.by }}
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="btn-group" role="group" aria-label="Action buttons">
+        <button class="btn btn-success" (click)="areasOk = true" [disabled]="areasOk">Confirmar</button>
       </div>
     </div>
   </div>

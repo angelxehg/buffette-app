@@ -34,15 +34,6 @@ export class InventoriesService {
     return new Promise<Inventory[]>((resolve, reject) => {
       setTimeout((obs: BehaviorSubject<Inventory[]>) => {
         const inventories = obs.value;
-        // Mock data
-        if (inventories.length === 0) {
-          for (let i = 1; i <= 5; i++) {
-            inventories.push({
-              id: i,
-              date: 'Hoy, 12 de nov 14:11',
-            });
-          }
-        }
         // Save in storage
         obs.next(inventories);
         localStorage.setItem('INVENTORIES', JSON.stringify(inventories));
